@@ -1,52 +1,38 @@
-/*
-    Greedy
-    
-    Author: Allen Whearry
-    
-    This is a solution of the greedy algorithm from
-    pset1 of CS50x Harvard.
-*/
-
+/***********************************************************
+** Allen Whearry Jr.
+*
+** instagram.com/NoRest4AWhearry
+*
+** Greedy:
+*
+** This is a solution of the greedy algorithm from
+** pset1 of CS50x Harvard.
+************************************************************/
 #include <cs50.h>
 #include <math.h>
 #include <stdio.h>
 
 int main(void)
 {
-    int q = 25;
-    int d = 10;
-    int n = 5;
-    int p = 1;
-    int cc = 0;
-    float c;
+    int coins[] = {25, 10, 5, 1};
+    int coin_count = 0;
+    float change;
     
-    do {
-    printf("How much change: ");
-    c = (int)round(GetFloat() * 100);
+    do 
+    {
+        printf("How much change: ");
+        change = (int) round(GetFloat() * 100);
     }
-    while (c < 0);
+    while (change < 0);
     
-    while (c >= q)
+    for (int i = 0; i < 4; i++)
     {
-        cc++;
-        c = c - q;
+        while ( change >= coins[i])
+        {
+            coin_count++;
+            change = change - coins[i];
+        }
     }
-    while (c < q && c >= d)
-    {
-        cc++;
-        c = c - d;
-    }
-    while (c < d && c >= n)
-    {
-        cc++;
-        c = c - n;
-    }
-    while (c >= p && c < n)
-    {
-        cc++;
-        c = c - p;
-    }
-    
-    printf("%i\n",cc);
+    printf("%i\n",coin_count);
     return 0;
 }
