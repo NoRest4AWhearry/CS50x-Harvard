@@ -12,6 +12,6 @@
 
 int main(void)
 {
-    // Prints Hello
+    // Prints "hello, world"
     printf("hello, world\n");
 }
