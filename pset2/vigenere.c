@@ -3,9 +3,9 @@
 *
 ** instagram.com/NoRest4AWhearry
 *
-** Caesar Cipher:
+** Vigenere Cipher:
 *
-** This is a solution of the "Caesar Cipher" problem from
+** This is a solution of the "Vigenere Cipher" problem from
 ** pset2 of CS50x Harvard.
 ************************************************************/
 #include <cs50.h>
