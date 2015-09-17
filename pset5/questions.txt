@@ -1,0 +1,13 @@
+0.  a fictitious long word said to mean a "lung disease caused by inhaling very fine ash and sand dust."
+1.  returns resource usage measures.
+2.  16
+3.  passing pointers are more efficient and faster than by passing whole values.
+4.  for loop checks everyword in dictionary and makes sure it is indeed a word (that does not contain numbers) by reading file character 
+    by character until is is presented with NULL character. Then it is prepared to be passed to check(). Finally it is printed.
+5.  fgetc allows you to keep track of each charcter, where fscanf might cause segmentation fault if string is longer than expected.
+6.  So the values cannot be changed.
+7.  I used a hash table where inside the struct node contains a "char word" and a "struct node* next".
+8.  My program was very slow at first. Check was about 2.8s.
+9.  I had to fix my hash function. I think it was doing too much in calculation to find index.
+10. I fell that my code in the check could be much faster. It is currently averaging about .9 seconds where the staff
+    implimentation is much faster.
